@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Product Movement</title>
+        <link rel="stylesheet" href="../static/product_move.css">
+    </head>
+    <body>
+        <h1>PRODUCT MOVEMENT</h1>
+        <form action="/productmove" method="post">
+            <label style="margin-left: -10px;">PRODUCT NAME</label>
+            <input type="text" name="product_id" id="product_id"><br>
+
+            <label for="" style="margin-left: 124px;">DATE</label>
+            <input type="date" name="date" id=""><br>
+
+            <label for=""style="margin-left: -15px;">FROM LOCATION</label>
+            <input type="text" name="from_location" id=""><br>
+
+            <label for=""style="margin-left: 23px;">TO LOCATION</label>
+            <input type="text" name="to_location" id=""><br>
+
+            <!-- <label for="">MOVEMENT ID</label>
+            <input type="text" name="move_id" id=""><br> -->
+
+            <label for=""style="margin-left: 59px;">QUANTITY</label>
+            <input type="number" name="qty" id=""><br>
+
+            <input type="submit" name="" id="" value="ADD"><br>
+            
+            <a href="{{url_for('home_page')}}">
+                <button type="button" value="BACk" class="btn1"> BACK </button>
+            </a><br>
+    
+            <a href="{{url_for('product_move_fetch_query')}}">
+                <button type="button" value="VIEW" class="btn1"> VIEW </button>
+            </a>
+
+        </form>
+        <table>
+            <tr>
+                <th>PRODUCT NAME</th>
+                <th>DATE AND TIME</th>
+                <th>FROM LOCATION</th>
+                <th>TO LOCATION</th>
+                <th>QUANTITY</th>
+                <th>EDIT</th>
+                <th>DELETE</th>
+            </tr>
+            {% for data in datas %}
+            <tr>
+                <td>{{data.product_id}}</td>
+                <td>{{data.date_time}}</td>
+                <td>{{data.from_location}}</td>
+                <td>{{data.to_location}}</td>
+                <td>{{data.qty}}</td>
+                <td><a href="{{url_for('product_move_update',movement_id = data.movement_id)}}"style="background: #1D1CE5;text-decoration: none;padding: 10px 20px;margin: 16px 25px;color: white;border-radius: 10px;">EDIT</a></td>
+                <td><a href="{{url_for('product_move_delete',product_id = data.product_id)}}"style="background: #1D1CE5;text-decoration: none;padding: 10px 20px;margin: 16px 25px;color: white;border-radius: 10px;">DELETE</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

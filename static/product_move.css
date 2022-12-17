@@ -1,0 +1,104 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body
+{
+    background-color: #B1D7B4;
+    color: white;
+}
+h1
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+    color: #181818;
+}
+form
+{
+    text-align: center;
+    margin-top: 50px;
+}
+input[type=text]
+{
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 50px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit]
+{
+    width: 10%;
+    background-color: #FFC090;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 50px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 129px;
+}
+input[type=submit]:hover
+{
+    background-color: black;
+}
+input[type=date]
+{
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 50px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}  
+input[type=number]
+{
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 50px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+label
+{
+    font-size: 25px;
+}
+.btn1
+{
+    width: 10%;
+    background-color: #FFC090;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 74px;
+}
+.btn1:hover
+{
+    background-color: black;
+}
+table
+{
+    text-align: center;
+    margin-left: 200px;
+    margin-top: 100px;
+}
+tr
+{
+    color: black;
+}
+tr td,tr,th
+{
+    border: 1px solid black;
+    padding: 15px;
+}

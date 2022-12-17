@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>location Add</title>
+        <link rel="stylesheet" href="../static/product_style.css">
+    </head>
+    <body>
+        <h1>LOCATION ADD</h1>
+        <form action="/location_page" method="post">
+            <label style="margin-left: 23px;">LOCATION NAME</label>
+            <input type="text" name="location_id" id=""><br>
+            
+            <label for=""style="margin-left: 30px;">LOCATION DESC</label>
+            <input type="text" name="location_desc" id=""><br>
+            
+            <input type="submit" name="" id="" value="LOCATION ADD">
+
+            <a href="{{url_for('home_page')}}">
+                <button type="button" value="BACk" class="btn1"> BACK </button>
+            </a><br>
+    
+            <a href="{{url_for('location_query')}}">
+                <button type="button" value="VIEW" class="btn1"> VIEW </button>
+            </a>
+        </form>
+        <table>
+            <tr>
+                <th>LOCATION NAME</th>
+                <th>LOCATION DESCRIPTION</th>
+                <th>LOCATION UPDATE</th>
+                <th>LOCATION DELETE</th>
+            </tr>
+            {% for data in datas %}
+            <tr>
+                <td>{{data.location_id}}</td>
+                <td>{{data.location_desc}}</td>
+                <td><a href="{{url_for('location_update',location_id = data.location_id)}}" style="background: #1D1CE5;text-decoration: none;padding: 10px 20px;margin: 16px 25px;color: white;border-radius: 10px;">Edit</a></td>
+                <td><a href="{{url_for('location_delete',location_id = data.location_id)}}" style="background: #1D1CE5;text-decoration: none;padding: 10px 20px;margin: 16px 25px;color: white;border-radius: 10px;">DELETE</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

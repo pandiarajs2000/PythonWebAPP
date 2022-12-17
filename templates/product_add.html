@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Product Add</title>
+        <link rel="stylesheet" href="../static/product_style.css">
+    </head>
+    <body>
+        <h1>PRODUCT ADD</h1>
+        <form action="/product_add" method="post">
+            <label style="margin-left: 25px;">PRODUCT NAME</label>
+            <input type="text" name="product_id" id="" ><br>
+
+            <label style="margin-left: 30px;">PRODUCT DESC</label>
+            <input type="text" name="product_desc" id=""><br>
+
+            <input type="submit" name="" id="" value="ADD"></a><br>
+            
+            <a href="{{url_for('home_page')}}">
+            <button type="button" value="BACk" class="btn1"> BACK </button>
+            </a><br>
+
+            <a href="{{url_for('product_query')}}">
+            <button type="button" value="VIEW" class="btn1"> VIEW </button>
+            </a>
+        </form>
+        <table>
+            <tr>
+                <th>PRODUCT NAME</th>
+                <th>PRODUCT DESCRIPTION</th>
+                <th>PRODUCT UPDATE</th>
+                <th>PRODUCT DELETE</th>
+            </tr>
+            {% for data in datas %}
+            <tr>
+                <td>{{data.product_id}}</td>
+                <td>{{data.product_desc}}</td>
+                <td><a href="{{url_for('product_update',product_id = data.product_id)}}" style="background: #1D1CE5;text-decoration: none;padding: 10px 20px;margin: 16px 25px;color: white;border-radius: 10px;">Edit</a></td>
+                <td><a href="{{url_for('product_delete',product_id = data.product_id)}}" style="background: #1D1CE5;text-decoration: none;padding: 10px 20px;margin: 16px 25px;color: white;border-radius: 10px;">DELETE</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
