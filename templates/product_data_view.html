@@ -1,22 +1,18 @@
 <html>
     <head>
-        <title>Reports</title>
-        <link rel="stylesheet" href="../static/report.css">
+        <title>View</title>
+        <link rel="stylesheet" href="../static/product_dataview.css">
     </head>
     <body>
-        <h1>WAREHOUSE STOCK REPORTS</h1>
         <table>
             <tr>
                 <th>PRODUCT NAME</th>
-                <th>WAREHOUSE</th>
-                
-                <th>QUANTITY</th>
+                <th>PRODUCT DESCRIPTION</th>
             </tr>
             {% for data in datas %}
             <tr>
                 <td>{{data.product_id}}</td>
-                <td>{{data.location}}</td>
-                <td>{{data.qty}}</td>
+                <td>{{data.product_desc}}</td>
             </tr>
             {% endfor %}
         </table>

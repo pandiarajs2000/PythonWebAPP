@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Location Add Delete</title>
+        <link rel="stylesheet" href="../static/product_update.css">
+    </head>
+    <body>
+        <h1>LOCATION DELETE</h1>
+        <table>
+            <tr>
+                <th>LOCATION NAME</th>
+                <th>LOCATION DESCRIPTION</th>
+                <th>LOCATION UPDATE</th>
+            </tr>
+            {% for data in datas %}
+            <tr>
+                <td>{{data.location_id}}</td>
+                <td>{{data.location_desc}}</td>
+                <td><a href="{{url_for('location_delete',location_id = data.location_id)}}" style="background: #1D1CE5;text-decoration: none;padding: 10px 20px;margin: 16px 25px;color: white;border-radius: 10px;">DELETE</a></td>
+            </tr>   
+            {% endfor %}
+        </table> 
+        <a href="{{url_for('home_page')}}">
+            <button type="button" value="BACk" class="btn1"> BACK TO HOME </button>
+        </a><br>
+    </body>
+</html>

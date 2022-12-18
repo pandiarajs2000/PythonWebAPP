@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>View</title>
+        <link rel="stylesheet" href="../static/location_dataview.css">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>LOCATION NAME</th>
+                <th>LOCATION DESCRIPTION</th>
+            </tr>
+            {% for data in datas %}
+            <tr>
+                <td>{{data.location_id}}</td>
+                <td>{{data.location_desc}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{{url_for('home_page')}}">
+            <button type="button" value="BACk" class="btn1"> BACK TO HOME </button>
+        </a><br>
+    </body>
+</html>

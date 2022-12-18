@@ -27,7 +27,7 @@ def product_add():
         pro_desc = request.form['product_desc']
 
         con = mysql.connection.cursor()
-        sql = "INSERT INTO products(product_id,product_desc) value(%s,%s)"
+        sql = "INSERT INTO products(product_id,product_desc) value (%s,%s)"
         con.execute(sql,[pro_id,pro_desc])
         mysql.connection.commit()
         con.close()
@@ -45,9 +45,19 @@ def product_query():
     print(result)
     return render_template('product_add.html',datas = result)
 
-#product update
-@app.route("/product_update/<string:product_id>",methods = ['GET','POST'])
-def product_update(product_id):
+
+#product_view_query
+@app.route('/product_update_view')
+def product_update_view():
+    con = mysql.connection.cursor()
+    sql = "select * from products"
+    con.execute(sql)
+    res = con.fetchall()
+    return render_template('product_add_update.html',datas = res)
+
+#product_update
+@app.route("/product_addData_update/<string:product_id>",methods = ['GET','POST'])
+def product_addData_update(product_id):
     con = mysql.connection.cursor()
     if request.method == 'POST':
         product_id = request.form['product_id']
@@ -57,7 +67,7 @@ def product_update(product_id):
         con.execute(sql,[product_desc,product_id])
         mysql.connection.commit()
         con.close()
-        return redirect(url_for('product_add'))
+        return redirect(url_for('product_update_view'))
 
     con = mysql.connection.cursor()
     sql = "select * from products where product_id = %s"
@@ -65,15 +75,24 @@ def product_update(product_id):
     result = con.fetchone()
     return render_template('product_update.html',datas = result)
 
+
+@app.route('/product_delete_view')
+def product_delete_view():
+    con = mysql.connection.cursor()
+    sql = "select * from products"
+    con.execute(sql)
+    res = con.fetchall()
+    return render_template('product_add_delete.html',datas = res)
+
 #product delete query
-@app.route("/product_delete/<string:product_id>",methods = ['GET','POST'])
-def product_delete(product_id):
+@app.route('/product_add_data_delete/<string:product_id>',methods = ['GET','POST'])
+def product_add_data_delete(product_id):
     con = mysql.connection.cursor()
     sql = "delete from products where product_id = %s"
     con.execute(sql,[product_id])
     mysql.connection.commit()
     con.close()
-    return redirect(url_for('product_add'))
+    return redirect(url_for('product_delete_view'))
 
 #location add
 @app.route('/location_page',methods = ['GET','POST'])
@@ -94,6 +113,15 @@ def location_page():
         return redirect(url_for('location_page'))
     return render_template('location_add.html')
 
+#loaction fetch query
+@app.route('/location_add_update')
+def location_add_update():
+    con = mysql.connection.cursor()
+    sql = "select * from location"
+    con.execute(sql)
+    result = con.fetchall()
+    return render_template('location_add_update.html',datas = result)
+
 #location update query
 @app.route("/location_update/<string:location_id>",methods = ['GET','POST'])
 def location_update(location_id):
@@ -106,7 +134,7 @@ def location_update(location_id):
         con.execute(sql,[location_desc,location_id])
         mysql.connection.commit()
         con.close()
-        return redirect(url_for('location_page'))
+        return redirect(url_for('location_add_update'))
 
     con = mysql.connection.cursor()
     sql = "select * from location where location_id = %s"
@@ -115,14 +143,13 @@ def location_update(location_id):
     return render_template('location_update.html',datas = result)
 
 #loaction fetch query
-@app.route('/location_query')
-def location_query():
+@app.route('/location_add_delete_query')
+def location_add_delete_query():
     con = mysql.connection.cursor()
     sql = "select * from location"
     con.execute(sql)
     result = con.fetchall()
-    #print("coming to location_query **********", result)
-    return render_template('location_add.html',datas = result)
+    return render_template('location_delete_query.html',datas = result)
 
 #location delete query
 @app.route("/location_delete/<string:location_id>",methods = ['GET','POST'])
@@ -132,7 +159,7 @@ def location_delete(location_id):
     con.execute(sql,[location_id])
     mysql.connection.commit()
     con.close()
-    return redirect(url_for('location_page'))
+    return redirect(url_for('location_add_delete_query'))
 
 
 #product move
@@ -195,11 +222,19 @@ def productmove():
         return redirect(url_for('productmove'))
     return render_template('product_movement.html')
 
+@app.route('/productmove_update_query')
+def productmove_update_query():
+    con = mysql.connection.cursor()
+    sql = "select * from productmovements"
+    con.execute(sql)
+    res = con.fetchall()
+    return render_template('productmove_update_query.html',datas = res)
+
 #product_move_update query
 @app.route("/product_move_update/<string:movement_id>",methods = ['GET','POST'])
 def product_move_update(movement_id):
     con = mysql.connection.cursor()
-    print("movementid ->",movement_id)
+    #print("movementid ->",movement_id)
     #print("Date =>",date_time)
     if request.method == 'POST':
         product_id = request.form['product_id']
@@ -213,7 +248,7 @@ def product_move_update(movement_id):
         con.execute(sql,[product_id,date_time,from_location,to_location,qty,movement_id])
         mysql.connection.commit()
         con.close()
-        return redirect(url_for('productmove'))
+        return redirect(url_for('productmove_update_query'))
 
     con = mysql.connection.cursor()
     sql = "select * from productmovements where movement_id = %s"
@@ -221,6 +256,14 @@ def product_move_update(movement_id):
     result = con.fetchone()
     return render_template('productmove_update.html',datas = result)
 
+#productmove delete query
+@app.route('/productmove_delete_query')
+def productmove_delete_query():
+    con = mysql.connection.cursor()
+    sql = "select * from productmovements"
+    con.execute(sql)
+    res = con.fetchall()
+    return render_template('productmove_delete_query.html',datas = res)
 
 #product_move_delete query
 @app.route('/product_move_delete/<string:product_id>',methods = ['GET','POST'])
@@ -230,7 +273,7 @@ def product_move_delete(product_id):
     con.execute(sql,[product_id])
     mysql.connection.commit()
     con.close()
-    return redirect(url_for('productmove'))
+    return redirect(url_for('productmove_delete_query'))
 
 
 #product_move_fetch query
@@ -250,7 +293,6 @@ def product_move_fetch_query():
 def report_page():
     con = mysql.connection.cursor()
     sql = "select product_id, from_location as location, max(qty) as qty from productmovements where length(to_location)=0 group by from_location, product_id order by from_location asc;"
-    
     con.execute(sql)
     result = con.fetchall()
     print(type(result))
@@ -264,6 +306,30 @@ def report_page():
 
     return render_template('report.html',datas = result+result1)
 
+#view query of product add data
+@app.route('/product_add_data_view')
+def product_add_data_view():
+    con = mysql.connection.cursor()
+    sql = "select * from products"
+    con.execute(sql)
+    res = con.fetchall()
+    return render_template('product_data_view.html',datas = res)
+
+@app.route('/location_data_view')
+def location_data_view():
+    con = mysql.connection.cursor()
+    sql = "select * from location"
+    con.execute(sql)
+    res = con.fetchall()
+    return render_template('location_data_view.html',datas = res)
+
+@app.route('/productmove_data_view')
+def productmove_data_view():
+    con = mysql.connection.cursor()
+    sql = "select * from productmovements"
+    con.execute(sql)
+    res = con.fetchall()
+    return render_template('productmove_data_view.html',datas = res)
 
 
 if __name__  == "__main__":

@@ -15,14 +15,14 @@
             <input type="submit" name="" id="" value="ADD"></a><br>
             
             <a href="{{url_for('home_page')}}">
-            <button type="button" value="BACk" class="btn1"> BACK </button>
+            <button type="button" value="BACk" class="btn1"> BACK TO HOME </button>
             </a><br>
 
-            <a href="{{url_for('product_query')}}">
+            <!-- <a href="{{url_for('product_query')}}">
             <button type="button" value="VIEW" class="btn1"> VIEW </button>
-            </a>
+            </a> -->
         </form>
-        <table>
+        <!-- <table>
             <tr>
                 <th>PRODUCT NAME</th>
                 <th>PRODUCT DESCRIPTION</th>
@@ -37,6 +37,6 @@
                 <td><a href="{{url_for('product_delete',product_id = data.product_id)}}" style="background: #1D1CE5;text-decoration: none;padding: 10px 20px;margin: 16px 25px;color: white;border-radius: 10px;">DELETE</a></td>
             </tr>
             {% endfor %}
-        </table>
+        </table> -->
     </body>
 </html>

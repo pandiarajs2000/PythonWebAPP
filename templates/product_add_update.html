@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Product Add Update</title>
+        <link rel="stylesheet" href="../static/product_update.css">
+    </head>
+    <body>
+        <h1>PRODUCT UPDATE</h1>
+        <table>
+            <tr>
+                <th>PRODUCT NAME</th>
+                <th>PRODUCT DESCRIPTION</th>
+                <th>CLICK</th>
+            </tr>
+            {% for data in datas %}
+            <tr>
+                <td>{{data.product_id}}</td>
+                <td>{{data.product_desc}}</td>
+                <td><a href="{{url_for('product_addData_update',product_id = data.product_id)}}" style="background: #1D1CE5;text-decoration: none;padding: 10px 20px;margin: 16px 25px;color: white;border-radius: 10px;">Edit</a></td>
+            {% endfor %}
+            </tr>
+        </table>
+        <a href="{{url_for('home_page')}}">
+            <button type="button" value="BACk" class="btn1"> BACK TO HOME </button>
+        </a>
+    </body>
+</html>

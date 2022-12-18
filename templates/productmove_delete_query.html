@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>View</title>
+        <link rel="stylesheet" href="../static/productmove_dataview.css">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>PRODUCT NAME</th>
+                <th>DATA AND TIME</th>
+                <th>FROM LOCATION</th>
+                <th>TO LOCATION</th>
+                <th>QUANTITY</th>
+                <th>PRODUCT MOVE UPDATE</th>
+            </tr>
+            {% for data in datas %}
+            <tr>
+                <td>{{data.product_id}}</td>
+                <td>{{data.date_time}}</td>
+                <td>{{data.from_location}}</td>
+                <td>{{data.to_location}}</td>
+                <td>{{data.qty}}</td>
+                <td><a href="{{url_for('product_move_delete',product_id = data.product_id)}}" style="background: #1D1CE5;text-decoration: none;padding: 10px 20px;margin: 16px 25px;color: white;border-radius: 10px;">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{{url_for('home_page')}}">
+            <button type="button" value="BACk" class="btn1"> BACK </button>
+        </a><br>
+    </body>
+</html>

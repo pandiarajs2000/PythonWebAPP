@@ -13,7 +13,7 @@ h1
     font-size: 20;
     font-weight: bold;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 18px;
     color: #181818;
 }
 form
@@ -87,7 +87,8 @@ h4
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: 74px;
+    margin-left: 75%;
+    margin-top: -250px;
 }
 .btn1:hover
 {
@@ -97,7 +98,7 @@ table
 {
     text-align: center;
     margin-left: 30%;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 tr
 {
@@ -108,20 +109,3 @@ tr td,tr,th
     border: 1px solid black;
     padding: 15px;
 }
-/*p a
-{
-    background: #1D1CE5;
-    text-decoration: none;
-    padding: 16px 25px;
-    margin: 16px 25px;
-    color: white;
-}
-a
-{
-    padding: 8px 15px;
-    background: #8BBCCC;
-    color: white;
-    border: none;
-    text-decoration: none;
-    border-radius: 10px;
-}*/
