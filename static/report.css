@@ -39,8 +39,8 @@ tr td,tr,th
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: 75%;
-    margin-top: -250px;
+    margin-left: 45%;
+    margin-top: 20px;
 }
 .btn1:hover
 {

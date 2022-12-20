@@ -2,10 +2,20 @@
     <head>
         <title>Product Add</title>
         <link rel="stylesheet" href="../static/product_style.css">
+        <script>
+            function validateForm() {
+              let prod_id = document.forms["productForm"]["product_id"].value;
+              let prod_desc = document.forms["productForm"]["product_desc"].value;
+              if (prod_id == "" || prod_desc=="") {
+                alert("Product Id and description cannot be empty.");
+                return false;
+              }
+            }
+            </script>
     </head>
     <body>
         <h1>PRODUCT ADD</h1>
-        <form action="/product_add" method="post">
+        <form name="productForm" action="/product_add" onsubmit="return validateForm()" method="post">
             <label style="margin-left: 25px;">PRODUCT NAME</label>
             <input type="text" name="product_id" id="" ><br>
 
@@ -17,26 +27,17 @@
             <a href="{{url_for('home_page')}}">
             <button type="button" value="BACk" class="btn1"> BACK TO HOME </button>
             </a><br>
-
-            <!-- <a href="{{url_for('product_query')}}">
-            <button type="button" value="VIEW" class="btn1"> VIEW </button>
-            </a> -->
         </form>
-        <!-- <table>
-            <tr>
-                <th>PRODUCT NAME</th>
-                <th>PRODUCT DESCRIPTION</th>
-                <th>PRODUCT UPDATE</th>
-                <th>PRODUCT DELETE</th>
-            </tr>
-            {% for data in datas %}
-            <tr>
-                <td>{{data.product_id}}</td>
-                <td>{{data.product_desc}}</td>
-                <td><a href="{{url_for('product_update',product_id = data.product_id)}}" style="background: #1D1CE5;text-decoration: none;padding: 10px 20px;margin: 16px 25px;color: white;border-radius: 10px;">Edit</a></td>
-                <td><a href="{{url_for('product_delete',product_id = data.product_id)}}" style="background: #1D1CE5;text-decoration: none;padding: 10px 20px;margin: 16px 25px;color: white;border-radius: 10px;">DELETE</a></td>
-            </tr>
-            {% endfor %}
-        </table> -->
+        {% with messages = get_flashed_messages() %}  
+         {% if messages %}  
+               {% for message in messages %}  
+                    <h4>{{ message }}</h4>  
+               {% endfor %}  
+         {% endif %}  
+      {% endwith %} 
+      
+      {% if error %}
+        <h4><strong>Error</strong>:{{error}}</h4>
+    {% endif %}
     </body>
 </html>

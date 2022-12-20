@@ -2,10 +2,41 @@
     <head>
         <title>Product Movement</title>
         <link rel="stylesheet" href="../static/product_move.css">
+        <script>
+            function validateForm()
+            {
+                let pro_id = document.forms['productmoveform']['product_id'].value;
+                let dates_ = document.forms['productmoveform']['date'].value;
+                let from_loc = document.forms['productmoveform']['from_location'].value;
+                let to_loc = document.forms['productmoveform']['to_location'].value;
+                let qty = document.forms['productmoveform']['qty'].value;
+
+                if(pro_id == "")
+                {
+                    alert("Please fill Product Name");
+                    return false;
+                }
+                else if(dates_ == "")
+                {
+                    alert("please fill the date");
+                    return false;
+                }
+                else if(from_loc == "")
+                {
+                    alert("From Location is mandatory one.");
+                    return false;
+                }
+                else if(qty == "")
+                {
+                    alert("Please fill the Quantity");
+                    return false;
+                }
+             }
+        </script>
     </head>
     <body>
         <h1>PRODUCT MOVEMENT</h1>
-        <form action="/productmove" method="post">
+        <form action="/productmove" method="post" name="productmoveform" onsubmit="return validateForm()">
             <label style="margin-left: -10px;">PRODUCT NAME</label>
             <input type="text" name="product_id" id="product_id"><br>
 
@@ -18,17 +49,20 @@
             <label for=""style="margin-left: 23px;">TO LOCATION</label>
             <input type="text" name="to_location" id=""><br>
 
-            <!-- <label for="">MOVEMENT ID</label>
-            <input type="text" name="move_id" id=""><br> -->
-
             <label for=""style="margin-left: 59px;">QUANTITY</label>
             <input type="number" name="qty" id=""><br>
 
             <input type="submit" name="" id="" value="ADD"><br>
-            
-            <a href="{{url_for('home_page')}}">
-                <button type="button" value="BACk" class="btn1"> BACK To HOME </button>
-            </a><br>
         </form>
+        <a href="{{url_for('home_page')}}">
+            <button type="button" value="BACk" class="btn1"> BACK To HOME </button>
+        </a><br>
+        {% with messages = get_flashed_messages() %}  
+         {% if messages %}  
+               {% for message in messages %}  
+                    <h4>{{ message }}</h4>  
+               {% endfor %}  
+         {% endif %}  
+      {% endwith %}
     </body>
 </html>

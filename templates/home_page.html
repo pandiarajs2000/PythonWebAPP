@@ -9,10 +9,12 @@
         <nav class="navbar navbar-expand-lg" style="background-color: #7FB77E;height: 100px;">
       
             <div class="container">
-              <a class="navbar-brand" href="#" >Inventory Management System</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
+              <a class="navbar-brand" href="/home">
+                <img src="../static/images/inventory-logo.png" alt="" class="tooltiptext ">
+                </a>
+                <!-- <div class="tooltip">Hover over me
+                  <span class="tooltiptext">Tooltip text</span>
+                </div> -->
     
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto mb-2 mb-lg-0">
@@ -21,16 +23,16 @@
                       </li>
                  <li class="nav-item dropdown">
                   <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">PRODUCT</a>
-                   <ul class="dropdown-menu">
-                   <li><a class="dropdown-item" href="/product_add"> ADD</a></li>
+                   <ul class="dropdown-menu" style="margin-left: 15px;background-color: #7FB77E;">
+                   <li><a class="dropdown-item" href="/product_add"> ADD</i></a></li>
                    <li><a class="dropdown-item" href="/product_update_view"> EDIT </a></li>
                    <li><a class="dropdown-item" href="/product_delete_view"> DELETE </a></li>
                    <li><a class="dropdown-item" href="/product_add_data_view">VIEW</a></li>
                    </ul>
-               </li>
+                </li>
                <li class="nav-item dropdown">
                 <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  LOCATION </a>
-                 <ul class="dropdown-menu">
+                 <ul class="dropdown-menu" style="margin-left: 15px;background-color: #7FB77E;">
                  <li><a class="dropdown-item" href="/location_page"> ADD</a></li>
                  <li><a class="dropdown-item" href="/location_add_update"> EDIT </a></li>
                  <li><a class="dropdown-item" href="/location_add_delete_query"> DELETE </a></li>
@@ -39,7 +41,7 @@
              </li>
              <li class="nav-item dropdown">
               <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  PRODUCT MOVEMENT  </a>
-               <ul class="dropdown-menu">
+               <ul class="dropdown-menu" style="margin-left: 15px;background-color: #7FB77E;opacity: 3px;">
                <li><a class="dropdown-item" href="/productmove">ADD</a></li>
                <li><a class="dropdown-item" href="/productmove_update_query"> EDIT </a></li>
                <li><a class="dropdown-item" href="productmove_delete_query"> DELETE </a></li>
@@ -52,6 +54,16 @@
           </ul>
         </div>
       </div>
-    </nav>
+        </nav>
+        <div style="padding-top: 40px;">
+          <p>
+            The inventory management ensures that the company always has the required materials and products in hand while keeping the cost as low as possible. 
+            Inventory Management refers to the process of supervising and controlling the stock items of a company. 
+            Typically, Inventory Management Systems are used by firms that either sell a product or manufacture a product for the purpose of accounting all the tangible goods that allow for a sale of a finished product, or parts for making a product. 
+            This inventory management system can be used to store the details of the inventory, update the inventory based on the sale details, generate receipts for sales, generate sales and inventory reports periodically. 
+            This inventory management software has one module, Admin. Admin has the authority to add, update and delete an inventory. 
+            
+          </p>
+        </div>
   </body>
 </html>

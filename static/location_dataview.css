@@ -7,7 +7,7 @@ table
 {
     text-align: center;
     margin-left: 35%;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 tr
 {
@@ -28,9 +28,15 @@ tr td,tr,th
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: 45%;
+    margin-left: 42%;
 }
 .btn1:hover
 {
     background-color: black;
+}
+h3
+{
+    color: black;
+    text-align: center;
+    font-size: 30px;
 }

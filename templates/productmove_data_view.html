@@ -4,7 +4,8 @@
         <link rel="stylesheet" href="../static/productmove_dataview.css">
     </head>
     <body>
-        <table>
+        <h3>Product Movements List</h3>
+        <table style="margin-left: 25%;">
             <tr>
                 <th>PRODUCT NAME</th>
                 <th>DATA AND TIME</th>
@@ -23,7 +24,7 @@
             {% endfor %}
         </table>
         <a href="{{url_for('home_page')}}">
-            <button type="button" value="BACk" class="btn1"> BACK </button>
+            <button type="button" value="BACk" class="btn1"> BACK TO HOME </button>
         </a><br>
     </body>
 </html>

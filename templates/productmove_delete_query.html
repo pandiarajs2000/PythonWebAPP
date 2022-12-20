@@ -20,12 +20,25 @@
                 <td>{{data.from_location}}</td>
                 <td>{{data.to_location}}</td>
                 <td>{{data.qty}}</td>
-                <td><a href="{{url_for('product_move_delete',product_id = data.product_id)}}" style="background: #1D1CE5;text-decoration: none;padding: 10px 20px;margin: 16px 25px;color: white;border-radius: 10px;">Delete</a></td>
+                <td><a href="{{url_for('product_move_delete',movement_id = data.movement_id)}}" style="background: #1D1CE5;text-decoration: none;padding: 10px 20px;margin: 16px 25px;color: white;border-radius: 10px;">Delete</a></td>
             </tr>
             {% endfor %}
         </table>
+        <h4>
+                {% with messages = get_flashed_messages() %}  
+                {% if messages %}  
+                    {% for message in messages %}  
+                            <h4>{{ message }}</h4>  
+                    {% endfor %}  
+                {% endif %}  
+            {% endwith %} 
+            
+            {% if error %}
+                <strong>Error</strong>:{{error}}
+            {% endif %}
+        </h4>
         <a href="{{url_for('home_page')}}">
-            <button type="button" value="BACk" class="btn1"> BACK </button>
+            <button type="button" value="BACk" class="btn1"> BACK TO HOME </button>
         </a><br>
     </body>
 </html>

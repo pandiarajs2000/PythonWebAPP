@@ -6,8 +6,8 @@ body
 table
 {
     text-align: center;
-    margin-left: 25%;
-    margin-top: 100px;
+    margin-left: 15%;
+    margin-top: 40px;
 }
 tr
 {
@@ -33,4 +33,22 @@ tr td,tr,th
 .btn1:hover
 {
     background-color: black;
+}
+h3
+{
+    text-align: center;
+    font-size: 30px;
+    color: black;
+}
+h4
+{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+h1
+{
+    text-align: center;
+    color: black;
+    font-size: 30px;
 }

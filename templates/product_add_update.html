@@ -19,6 +19,18 @@
             {% endfor %}
             </tr>
         </table>
+        {% with messages = get_flashed_messages() %}  
+         {% if messages %}  
+               {% for message in messages %}  
+                    <h4>{{ message }}</h4>  
+               {% endfor %}  
+         {% endif %}  
+      {% endwith %} 
+      
+      {% if error %}
+        <h4><strong>Error</strong>:{{error}}</h4>
+    {% endif %}
+
         <a href="{{url_for('home_page')}}">
             <button type="button" value="BACk" class="btn1"> BACK TO HOME </button>
         </a>

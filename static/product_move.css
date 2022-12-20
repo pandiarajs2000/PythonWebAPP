@@ -81,7 +81,7 @@ label
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: 74px;
+    margin-left: 47.5%;
 }
 .btn1:hover
 {
@@ -101,4 +101,10 @@ tr td,tr,th
 {
     border: 1px solid black;
     padding: 15px;
+}
+h4
+{
+    text-align: center;
+    font-size: 30px;
+    color: black;
 }

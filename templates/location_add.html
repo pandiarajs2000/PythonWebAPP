@@ -2,11 +2,22 @@
     <head>
         <title>location Add</title>
         <link rel="stylesheet" href="../static/product_style.css">
+        <script>
+            function validateForm()
+            {
+                let location_id = document.forms['locationForm']['location_id'].value;
+                let location_desc = document.forms['locationForm']['location_desc'].value;
+                if (location_id == "" || location_desc == "")
+                {
+                    alert("Location Id and Location Description cannot be Empty.");
+                }
+            }
+        </script>
     </head>
     <body>
         <h1>LOCATION ADD</h1>
         <div > </div>
-        <form action="/location_page" method="post">
+        <form action="/location_page" method="post" name="locationForm" onsubmit="return validateForm()">
             <label style="margin-left: 23px;">LOCATION NAME</label>
             <input type="text" name="location_id" id=""><br>
             
@@ -19,5 +30,16 @@
                 <button type="button" value="BACk" class="btn1"> BACK TO HOME </button>
             </a><br>
         </form>
+        {% with messages = get_flashed_messages() %}  
+         {% if messages %}  
+               {% for message in messages %}  
+                    <h4>{{ message }}</h4>  
+               {% endfor %}  
+         {% endif %}  
+      {% endwith %} 
+
+      {% if error %}
+        <h4><strong>Error</strong>:{{error}}</h4>
+      {% endif %}
     </body>
 </html>

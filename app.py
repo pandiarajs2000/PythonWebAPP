@@ -1,3 +1,4 @@
+from MySQLdb import MySQLError
 from flask import Flask,render_template,request,redirect,url_for,flash
 from flask_mysqldb import MySQL
 
@@ -20,19 +21,30 @@ def home_page():
 #product_add page
 @app.route('/product_add',methods = ['GET','POST'])
 def product_add():
-    
+    message=''
     if request.method == "POST":
+        try:    
+            pro_id = request.form['product_id']
+            pro_desc = request.form['product_desc']
         
-        pro_id = request.form['product_id']
-        pro_desc = request.form['product_desc']
-
-        con = mysql.connection.cursor()
-        sql = "INSERT INTO products(product_id,product_desc) value (%s,%s)"
-        con.execute(sql,[pro_id,pro_desc])
-        mysql.connection.commit()
-        con.close()
-        flash('Product Add Successfully')
-        return redirect(url_for('product_add'))
+            con = mysql.connection.cursor()
+            sql = "INSERT INTO products(product_id,product_desc) value (%s,%s)"
+            con.execute(sql,[pro_id,pro_desc])
+            mysql.connection.commit()
+            print(con.rowcount, "Record inserted successfully into Laptop table")
+            if(con.rowcount==1):
+                message=f"The product '{pro_id}' is added successfully. You can now add product stock/movements for '{pro_id}'"
+                flash(message, category="message")
+            return redirect(url_for('product_add'))
+        except MySQLError as ex:
+            if("Duplicate" in ex.args[1]):
+                message=f"The product {pro_id} is exists already. You cannot add an existing product again.."
+                flash(message, category="error")
+            else:
+                flash(ex.args[1], category="error")
+            return render_template('product_add.html')
+        finally:
+            con.close()
     return render_template('product_add.html')
 
 #product fetch query
@@ -59,6 +71,7 @@ def product_update_view():
 @app.route("/product_addData_update/<string:product_id>",methods = ['GET','POST'])
 def product_addData_update(product_id):
     con = mysql.connection.cursor()
+    message = ""
     if request.method == 'POST':
         product_id = request.form['product_id']
         product_desc = request.form['product_desc']
@@ -66,6 +79,9 @@ def product_addData_update(product_id):
         print(sql)
         con.execute(sql,[product_desc,product_id])
         mysql.connection.commit()
+        if(con.rowcount == 1):
+            message = f"Product '{product_id}' updated successfully.."
+            flash(message, category="message")
         con.close()
         return redirect(url_for('product_update_view'))
 
@@ -87,30 +103,56 @@ def product_delete_view():
 #product delete query
 @app.route('/product_add_data_delete/<string:product_id>',methods = ['GET','POST'])
 def product_add_data_delete(product_id):
-    con = mysql.connection.cursor()
-    sql = "delete from products where product_id = %s"
-    con.execute(sql,[product_id])
-    mysql.connection.commit()
-    con.close()
+    message = ""
+    try:
+        con = mysql.connection.cursor()
+        sql = "delete from products where product_id = %s"
+        con.execute(sql,[product_id])
+        mysql.connection.commit()
+        if(con.rowcount == 1):
+            message = f"This Product '{product_id}' is Deleted.."
+            print(message)
+            flash(message, category="message")
+        return redirect(url_for('product_delete_view'))
+    except MySQLError as ex:
+        if("Duplicate" in ex.args[1]):
+            message = f"This Product '{product_id}' is already exists..."
+            flash(message, category="error")
+        elif("foreign key constraint fails" in ex.args[1]):
+            message = f"This Product '{product_id}' is having a warehouse entry, So it cannot be deleted. If you still wanted to delete, please delete the product movement data first.."
+            flash(message, category="error")
+        else:
+            flash(ex.args[1], category="error")
+    finally:
+        con.close()
     return redirect(url_for('product_delete_view'))
 
 #location add
 @app.route('/location_page',methods = ['GET','POST'])
 def location_page():
-
+    message = ""
     if request.method == "POST":
-        
-        loc_id = request.form['location_id']
-        loc_desc = request.form['location_desc']
-        
-        con = mysql.connection.cursor()
-        sql = "INSERT INTO location(location_id,location_desc) value(%s,%s)"
-        #print("coming to location_page &&&&&&&",sql)
-        con.execute(sql,[loc_id,loc_desc])
-        mysql.connection.commit()
-        con.close()
-        flash('Location Add Successfully')
-        return redirect(url_for('location_page'))
+        try:
+            loc_id = request.form['location_id']
+            loc_desc = request.form['location_desc']
+
+            con = mysql.connection.cursor()
+            sql = "INSERT INTO location(location_id,location_desc) value(%s,%s)"
+            con.execute(sql,[loc_id,loc_desc])
+            mysql.connection.commit()
+            if(con.rowcount == 1):
+                message=f"The location '{loc_id}' is added successfully. You can now add location stock/movements for '{loc_id}'"
+                flash(message, category="message")
+            return redirect(url_for('location_page'))
+        except MySQLError as ex:
+            if("Duplicate" in ex.args[1]):
+                message=f"The location {loc_id} is exists already. You cannot add an existing location again.."
+                flash(message, category="error")
+            else:
+                flash(ex.args[1], category="error")
+            return render_template('location_add.html')
+        finally:
+            con.close()
     return render_template('location_add.html')
 
 #loaction fetch query
@@ -126,6 +168,7 @@ def location_add_update():
 @app.route("/location_update/<string:location_id>",methods = ['GET','POST'])
 def location_update(location_id):
     con = mysql.connection.cursor()
+    message = ""
     if request.method == 'POST':
         location_id = request.form['location_id']
         location_desc = request.form['location_desc']
@@ -133,6 +176,9 @@ def location_update(location_id):
         print(sql)
         con.execute(sql,[location_desc,location_id])
         mysql.connection.commit()
+        if(con.rowcount == 1):
+            message = f"'{location_id}'Location updated successfully.."
+            flash(message, category="message")
         con.close()
         return redirect(url_for('location_add_update'))
 
@@ -154,72 +200,114 @@ def location_add_delete_query():
 #location delete query
 @app.route("/location_delete/<string:location_id>",methods = ['GET','POST'])
 def location_delete(location_id):
-    con = mysql.connection.cursor()
-    sql = "delete from location where location_id = %s"
-    con.execute(sql,[location_id])
-    mysql.connection.commit()
-    con.close()
+    message = ""
+    try:
+        con = mysql.connection.cursor()
+        sql = "delete from location where location_id = %s"
+        con.execute(sql,[location_id])
+        mysql.connection.commit()
+        if(con.rowcount == 1):
+            message = f"This '{location_id}'Location Deleted"
+            print(message)
+            flash(message,category="message")
+    except MySQLError as ex:
+        if("Duplicate" in ex.args[1]):
+            message = f"This location '{location_id}' is already exists..."
+            flash(message, category="error")
+        elif("foreign key constraint fails" in ex.args[1]):
+            message = f"This location '{location_id}' is having a warehouse entry, So it cannot be deleted. If you still wanted to delete, please delete the product movement data first.."
+            flash(message, category="error")
+        else:
+            flash(ex.args[1], category="error")    
+    finally:        
+        con.close()
     return redirect(url_for('location_add_delete_query'))
 
 
 #product move
 @app.route('/productmove',methods = ['GET','POST'])
 def productmove():
-    existing_qty=0
+    existing_qty = 0
+    message = ""
     if request.method == "POST":
-        pro_id = request.form['product_id']
-        date_time = request.form['date']
-        from_loc = request.form['from_location']
-        to_loc = request.form['to_location']
-        qty = request.form['qty']
-        
-        print("print => ",pro_id,date_time,from_loc,to_loc,qty)
-        print("to_location",len(to_loc))
-        if len(to_loc) > 1:
-            #print(to_loc)
-            con = mysql.connection.cursor()
-            existing_qty_sql = "select max(qty) as qty from productmovements"
+        try:
+            pro_id = request.form['product_id']
+            date_time = request.form['date']
+            from_loc = request.form['from_location']
+            to_loc = request.form['to_location']
+            qty = request.form['qty']
             
-            con.execute(existing_qty_sql)
-            existing_qty_dic = con.fetchone()
-            existing_qty=existing_qty_dic.get('qty')
-            #mysql.connection.commit()
-            con.close()
-            print("quantity => ",existing_qty,from_loc)
-            if(int(existing_qty) >= int(qty)):
-                print("existing quantity", existing_qty)
-                print("existing quantity type", type(existing_qty))
-                print(" quantity type", type(qty))
+            print("print => ",pro_id,date_time,from_loc,to_loc,qty)
+            print("to_location",len(to_loc))
+            if len(to_loc) > 1:
+                #print(to_loc)
                 con = mysql.connection.cursor()
-                #update
-                sql_update = "update productmovements set qty = %s where product_id = %s and from_location = %s"
-                print("update query", sql_update, "int(existing_qty)-int(qty)", int(existing_qty)-int(qty))
-                con.execute(sql_update,[int(existing_qty)-int(qty),pro_id,from_loc])
-                #insert
-                sql_insert = "insert into productmovements (product_id,date_time,from_location,to_location,qty) value(%s,%s,%s,%s,%s)"
-                con.execute(sql_insert,[pro_id,date_time,from_loc,to_loc,qty])
-                print("sql insert",sql_insert)
+                existing_qty_sql = "select qty from productmovements where product_id=%s and length(to_location) = 0 "
+                con.execute(existing_qty_sql,[pro_id])
+                existing_qty_dic = con.fetchone()
+                existing_qty=existing_qty_dic.get('qty')
                 mysql.connection.commit()
-                con.close()
-            
-            elif (existing_qty <= qty):
-                #warning message
-                #update qty as 0
-                sql_update = "update productmovements set qty = 0 where movement_id = %s"
-                #insert
-                sql_insert = "insert into productmovements (product_id,date_time,from_location,to_location,existing_quantity - qty) value(%s,%s,%s,%s,%s)"
-                con.execute(sql_update[pro_id,date_time,from_loc,to_loc,qty],sql_insert[pro_id,date_time,from_loc,to_loc,qty])
-                mysql.connection.commit()
-                con.close()
-        else:
-            con = mysql.connection.cursor()
-            sql = "INSERT INTO productmovements(product_id,date_time,from_location,to_location,qty) value(%s,%s,%s,%s,%s)"
-            print(sql)
-            con.execute(sql,[pro_id,date_time,from_loc,to_loc,qty])
-            mysql.connection.commit()
+                #con.close()
+                print("quantity => ",existing_qty,from_loc)
+                if(int(existing_qty) >= int(qty)):
+                    print("existing quantity", existing_qty)
+                    print("existing quantity type", type(existing_qty))
+                    print(" quantity type", type(qty))
+                    con = mysql.connection.cursor()
+                    #update
+                    sql_update = "update productmovements set qty = %s where product_id = %s and from_location = %s and to_location = %s"
+                    print("update query", sql_update, "int(existing_qty)-int(qty)", int(existing_qty)-int(qty))
+                    con.execute(sql_update,[int(existing_qty)-int(qty),pro_id,from_loc, to_loc])
+                    #insert
+                    sql_insert = "insert into productmovements (product_id,date_time,from_location,to_location,qty) value(%s,%s,%s,%s,%s)"
+                    con.execute(sql_insert,[pro_id,date_time,from_loc,to_loc,qty])
+                    print("sql insert",sql_insert)
+                    mysql.connection.commit()
+                    #con.close()
+                    if(con.rowcount == 1):
+                        message = f"The products '{pro_id}' is moved successfully"
+                        flash(message, category="message")
+                    return redirect(url_for('productmove'))
+                elif (existing_qty <= qty):
+                    #warning message
+                    #update qty as 0
+                    sql_update = "update productmovements set qty = 0 where movement_id = %s"
+                    #insert
+                    sql_insert = "insert into productmovements (product_id,date_time,from_location,to_location,existing_quantity - qty) value(%s,%s,%s,%s,%s)"
+                    con.execute(sql_update[pro_id,date_time,from_loc,to_loc,qty],sql_insert[pro_id,date_time,from_loc,to_loc,qty])
+                    mysql.connection.commit()
+                    #con.close()
+                    if(con.rowcount == 1):
+                        message = f"The products '{pro_id}' is moved successfully"
+                        flash(message, category="message")
+                    return redirect(url_for('productmove'))
+            else:
+                try:
+                    con = mysql.connection.cursor()
+                    sql = "INSERT INTO productmovements(product_id,date_time,from_location,to_location,qty) value(%s,%s,%s,%s,%s)"
+                    con.execute(sql,[pro_id,date_time,from_loc,to_loc,qty])
+                    mysql.connection.commit()
+                    message = f"The products '{pro_id}' is moved successfully"
+                    flash(message, category="message")
+                except MySQLError as insertEx:
+                    if("foreign key constraint fails" in insertEx.args[1]):
+                        message = f"The product '{pro_id}' is not available for movement. Please add it to the list of products, before proceed with stock/movement."
+                        flash(message, category="message")
+                    else:
+                        flash(insertEx.args[1], category="error")
+                finally:
+                    con.close()
+
+            return redirect(url_for('productmove'))
+        except MySQLError as ex:
+            if("Duplicate" in ex.args[1]):
+                message = f"The product {pro_id} is exists already.you can move product.."
+                flash(message, category="message")
+            else:
+                flash(ex.args[1], category="error")
+            return render_template('product_movement.html')
+        finally:
             con.close()
-        flash("Product Moved Successfully")
-        return redirect(url_for('productmove'))
     return render_template('product_movement.html')
 
 @app.route('/productmove_update_query')
@@ -236,6 +324,7 @@ def product_move_update(movement_id):
     con = mysql.connection.cursor()
     #print("movementid ->",movement_id)
     #print("Date =>",date_time)
+    message = ""
     if request.method == 'POST':
         product_id = request.form['product_id']
         date_time = request.form['date_time']
@@ -247,6 +336,9 @@ def product_move_update(movement_id):
         sql = "update productmovements set product_id = %s, date_time = %s, from_location = %s, to_location = %s, qty = %s where movement_id = %s"
         con.execute(sql,[product_id,date_time,from_location,to_location,qty,movement_id])
         mysql.connection.commit()
+        if(con.rowcount == 1):
+            message = f"'{product_id}'Product Movement updated successfully.."
+            flash(message, category="message")
         con.close()
         return redirect(url_for('productmove_update_query'))
 
@@ -266,13 +358,23 @@ def productmove_delete_query():
     return render_template('productmove_delete_query.html',datas = res)
 
 #product_move_delete query
-@app.route('/product_move_delete/<string:product_id>',methods = ['GET','POST'])
-def product_move_delete(product_id):
-    con = mysql.connection.cursor()
-    sql = "delete from productmovements where product_id = %s"
-    con.execute(sql,[product_id])
-    mysql.connection.commit()
-    con.close()
+@app.route('/product_move_delete/<string:movement_id>',methods = ['GET','POST'])
+def product_move_delete(movement_id):
+    message = ""
+    try:
+        con = mysql.connection.cursor()
+        sql = "delete from productmovements where movement_id = %s"
+        con.execute(sql,[movement_id])
+        mysql.connection.commit()
+        if(con.rowcount == 1):
+            message = f"The product stock is deleted successfully."
+            print("message--->",message)
+            flash(message,category="message")
+        return redirect(url_for('productmove_delete_query'))
+    except MySQLError as ex:
+        flash(ex.args[1],category="error")
+    finally:
+        con.close()
     return redirect(url_for('productmove_delete_query'))
 
 
