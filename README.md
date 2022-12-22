@@ -1,11 +1,17 @@
 # PythonWebAPP
-Inventory Management System,
-Download a file and Install the Requirements
-1. pip install flask
-2. pip install flask_mysqldb
-Run a Application
-1. To VS Code Editor
-2. flask run or mainfile (app.py)
+Python Flask Web App for Inventory Management System
+
+Steps:
+1. Donwload the source code package from this github link
+2. Add the InventoryWebApp project to the IDE
+3. pip install flask
+4. pip install flask_mysqldb
+5. To run the application,
+    Open a cmd or editor and then type the below command,
+    flask run
+    or
+    navigate to the project folder then run the below command
+    <path to project folder> python ./app.py
 
 Screen Shots :
 Home Screen
@@ -21,17 +27,19 @@ Product Screen :
 
 2. Product Update Screen 
 
-![product_update](https://user-images.githubusercontent.com/111049434/209115728-e555d24c-9f6f-43b1-95b8-8c63a03de5d1.png)
+![pro_update1](https://user-images.githubusercontent.com/111049434/209146079-16fe37e2-6519-4b25-81d6-24a81fe55ad6.png)
 
 ![pro_update](https://user-images.githubusercontent.com/111049434/209115762-1bbc1b8f-a2fa-4b21-bc8c-37eeaa8ec1cd.png)
 
 3.Product Delete Screen 
 
-![pro_delete](https://user-images.githubusercontent.com/111049434/209115916-61a16d8e-0611-4e0a-a765-0427f7f18390.png)
+![pro_delete](https://user-images.githubusercontent.com/111049434/209145842-0e2a0f5f-134b-4ac5-b0ac-00fe19529a31.png)
+
+![product_delete_error](https://user-images.githubusercontent.com/111049434/209147577-bf676721-49eb-414b-a6e4-d15247cd8429.png)
 
 4.Product List 
 
-![pro_view](https://user-images.githubusercontent.com/111049434/209116104-ea4b66db-21a2-4db2-b7dd-66f051fc60ed.png)
+![product_view1](https://user-images.githubusercontent.com/111049434/209149101-2f6e7194-01e3-48f1-a8db-48969861a1a7.png)
 
 Location Screens 
 
