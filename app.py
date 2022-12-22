@@ -1,7 +1,8 @@
 from MySQLdb import MySQLError
 from flask import Flask,render_template,request,redirect,url_for,flash
 from flask_mysqldb import MySQL
-
+import logging
+import sys
 app = Flask(__name__)
 
 #mysql connection
@@ -13,15 +14,26 @@ app.config["MYSQL_CURSORCLASS"]="DictCursor"
 
 mysql = MySQL(app)
 
+logging.basicConfig(
+    filename='log/InventoryWebApp.log', 
+    encoding='utf-8', 
+    level=logging.DEBUG, 
+    format="%(asctime)s - %(levelname)s - %(name)s - %(message)s"
+)
+
+logger = logging.getLogger(__name__)
+
 #home_page
 @app.route('/home')
 def home_page():
+    logger.debug('This is a debug message')
     return render_template('home_page.html')
 
 #product_add page
 @app.route('/product_add',methods = ['GET','POST'])
 def product_add():
     message=''
+    logger.info("** inside product add method")
     if request.method == "POST":
         try:    
             pro_id = request.form['product_id']
@@ -31,7 +43,7 @@ def product_add():
             sql = "INSERT INTO products(product_id,product_desc) value (%s,%s)"
             con.execute(sql,[pro_id,pro_desc])
             mysql.connection.commit()
-            print(con.rowcount, "Record inserted successfully into Laptop table")
+            logger.debug(f"%s Record inserted successfully into product table",con.rowcount)
             if(con.rowcount==1):
                 message=f"The product '{pro_id}' is added successfully. You can now add product stock/movements for '{pro_id}'"
                 flash(message, category="message")
@@ -39,9 +51,11 @@ def product_add():
         except MySQLError as ex:
             if("Duplicate" in ex.args[1]):
                 message=f"The product {pro_id} is exists already. You cannot add an existing product again.."
+                logger.error(f"product_add() Database exception Occurred: %s",ex.args[1])
                 flash(message, category="error")
             else:
                 flash(ex.args[1], category="error")
+                logger.error(f"product_add() Database exception Occurred: %s",ex.args[1])
             return render_template('product_add.html')
         finally:
             con.close()
@@ -54,7 +68,7 @@ def product_query():
     sql = "select * from products"
     con.execute(sql)
     result = con.fetchall()
-    print(result)
+    logger.debug(f"product_query() Database exception Occurred: %s",result)
     return render_template('product_add.html',datas = result)
 
 
@@ -337,15 +351,17 @@ def product_move_update(movement_id):
         con.execute(sql,[product_id,date_time,from_location,to_location,qty,movement_id])
         mysql.connection.commit()
         if(con.rowcount == 1):
-            message = f"'{product_id}'Product Movement updated successfully.."
+            message = f" '{product_id}' Product Movement updated successfully.."
             flash(message, category="message")
         con.close()
         return redirect(url_for('productmove_update_query'))
 
     con = mysql.connection.cursor()
-    sql = "select * from productmovements where movement_id = %s"
+    sql = "select movement_id, product_id, DATE(date_time) as date_time, from_location, to_location, qty from productmovements where movement_id = %s"
     con.execute(sql,[movement_id])
     result = con.fetchone()
+    print("result:",result['date_time'])
+    print([(k, result[k]) for k in result])
     return render_template('productmove_update.html',datas = result)
 
 #productmove delete query
@@ -435,5 +451,7 @@ def productmove_data_view():
 
 
 if __name__  == "__main__":
+    logger.info("Program started")
     app.secret_key = "pandi"
     app.run(debug = True)
+    logger.info("Program finished")

@@ -4,7 +4,29 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
         <link rel="stylesheet" href="../static/home.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lobster&family=Rubik&display=swap" rel="stylesheet">
     </head>
+    <style>
+      .footer
+      {
+          margin-top: 200px;      
+      }
+      .grow img
+      {
+        transition: 1s ease;
+        width: 30%;
+        margin-left: 120px;
+      }
+
+      .grow img:hover{
+      -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2);
+      transition: 1s ease;
+      }
+      
+    </style>
     <body>
         <nav class="navbar navbar-expand-lg" style="background-color: #7FB77E;height: 100px;">
       
@@ -12,9 +34,6 @@
               <a class="navbar-brand" href="/home">
                 <img src="../static/images/inventory-logo.png" alt="" class="tooltiptext ">
                 </a>
-                <!-- <div class="tooltip">Hover over me
-                  <span class="tooltiptext">Tooltip text</span>
-                </div> -->
     
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto mb-2 mb-lg-0">
@@ -55,15 +74,25 @@
         </div>
       </div>
         </nav>
-        <div style="padding-top: 40px;">
+        <div class="content">
           <p>
             The inventory management ensures that the company always has the required materials and products in hand while keeping the cost as low as possible. 
             Inventory Management refers to the process of supervising and controlling the stock items of a company. 
             Typically, Inventory Management Systems are used by firms that either sell a product or manufacture a product for the purpose of accounting all the tangible goods that allow for a sale of a finished product, or parts for making a product. 
             This inventory management system can be used to store the details of the inventory, update the inventory based on the sale details, generate receipts for sales, generate sales and inventory reports periodically. 
             This inventory management software has one module, Admin. Admin has the authority to add, update and delete an inventory. 
-            
           </p>
         </div>
+        <div class="grow">
+          <img src="../static/images/order.png" alt="">
+          <!-- <p style="margin-left: 120px;font-size: 20px;font-weight: bold;margin-top: 20px;">Buy your orders</p> -->
+        </div><br>
+        <div class="grow">
+          <img src="../static/images/deliverypi.jpg" alt="" style="margin-left: 50%;margin-top: -23%;">
+        </div>
+        <div class = "footer">
+          <hr style="height:2px;color: black;">
+          <p class="text-center">Copyright @2022 All rights reserved | This template is made with by Pandiaraj</p>  
+        </div>  
   </body>
 </html>

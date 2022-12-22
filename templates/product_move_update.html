@@ -1,19 +1,73 @@
 <html>
-    <head>
-        <title>Product Add</title>
-        <link rel="stylesheet" href="../static/product_style.css">
-    </head>
-    <body>
-        <h1>LOCATION UPDATE</h1>
+
+<head>
+    <title>Product Add</title>
+    <link rel="stylesheet" href="../static/product_style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+
+        <div class="container">
+            <a class="navbar-brand" href="/home">
+                <img src="../static/images/inventory-logo.png" alt="" class="tooltiptext ">
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home" style="color: #F7F6DC;">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            style="color: #F7F6DC;">PRODUCT</a>
+                        <ul class="dropdown-menu" style="margin-left: 15px;background-color: #7FB77E;">
+                            <li><a class="dropdown-item" href="/product_add"> ADD</i></a></li>
+                            <li><a class="dropdown-item" href="/product_update_view"> EDIT </a></li>
+                            <li><a class="dropdown-item" href="/product_delete_view"> DELETE </a></li>
+                            <li><a class="dropdown-item" href="/product_add_data_view">VIEW</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown" style="color: #F7F6DC;">
+                            LOCATION </a>
+                        <ul class="dropdown-menu" style="margin-left: 15px;background-color: #7FB77E;">
+                            <li><a class="dropdown-item" href="/location_page"> ADD</a></li>
+                            <li><a class="dropdown-item" href="/location_add_update"> EDIT </a></li>
+                            <li><a class="dropdown-item" href="/location_add_delete_query"> DELETE </a></li>
+                            <li><a class="dropdown-item" href="/location_data_view">VIEW</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown" style="color: #F7F6DC;">
+                            PRODUCT MOVEMENT </a>
+                        <ul class="dropdown-menu" style="margin-left: 15px;background-color: #7FB77E;opacity: 3px;">
+                            <li><a class="dropdown-item" href="/productmove">ADD</a></li>
+                            <li><a class="dropdown-item" href="/productmove_update_query"> EDIT </a></li>
+                            <li><a class="dropdown-item" href="productmove_delete_query"> DELETE </a></li>
+                            <li><a class="dropdown-item" href="/productmove_data_view">VIEW</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/report" class="nav-link" style="color: #F7F6DC;">REPORT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="mainContent">
+        <h1 style="font-size: 25px;">LOCATION UPDATE</h1>
         <form action="" method="post">
 
-            <label style="margin-left: 25px;">MOVEMENT ID</label>
+            <label>MOVEMENT ID</label>
             <input type="text" name="movement_id" id="" value="{{datas.movement_id}}"><br>
 
-            <label style="margin-left: 25px;">PRODUCT NAME</label>
+            <label>PRODUCT NAME</label>
             <input type="text" name="product_id" id="" value="{{datas.product_id}}"><br>
 
-            <label style="margin-left: 30px;">DATE AND TIME</label>
+            <label>DATE AND TIME</label>
             <input type="text" name="date_time" id="" value="{{datas.date_time}}"><br>
 
             <label for="">FROM LOCATION</label>
@@ -27,5 +81,11 @@
 
             <input type="submit" name="" id="" value="UPDATE"></a><br>
         </form>
-    </body>
+    </div>
+    <div class="footer">
+        <hr style="height:2px;">
+        <p class="text-center">Copyright @2022 All rights reserved | This template is made with by Pandiaraj</p>
+    </div>
+</body>
+
 </html>

@@ -1,0 +1,192 @@
+INFO:__main__:Program started
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 191-848-549
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\nirai\\OneDrive\\Documents\\Pandiaraj\\Python-Projects\\python-projects\\InventoryWebApp\\app.py', reloading
+2022-12-22 07:09:27,140 - INFO - __main__ - Program started
+2022-12-22 07:09:27,199 - WARNING - werkzeug -  * Debugger is active!
+2022-12-22 07:09:27,220 - INFO - werkzeug -  * Debugger PIN: 191-848-549
+2022-12-22 07:09:28,094 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-22 07:10:02,625 - INFO - werkzeug -  * Detected change in 'C:\\Users\\nirai\\OneDrive\\Documents\\Pandiaraj\\Python-Projects\\python-projects\\InventoryWebApp\\app.py', reloading
+2022-12-22 07:10:04,008 - INFO - __main__ - Program started
+2022-12-22 07:10:04,040 - WARNING - werkzeug -  * Debugger is active!
+2022-12-22 07:10:04,056 - INFO - werkzeug -  * Debugger PIN: 191-848-549
+2022-12-22 07:10:04,501 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-22 07:10:23,098 - INFO - werkzeug -  * Detected change in 'C:\\Users\\nirai\\OneDrive\\Documents\\Pandiaraj\\Python-Projects\\python-projects\\InventoryWebApp\\app.py', reloading
+2022-12-22 07:10:24,398 - INFO - __main__ - Program started
+2022-12-22 07:10:24,431 - WARNING - werkzeug -  * Debugger is active!
+2022-12-22 07:10:24,439 - INFO - werkzeug -  * Debugger PIN: 191-848-549
+2022-12-22 07:10:24,859 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-22 07:10:26,204 - INFO - __main__ - Program finished
+2022-12-22 07:10:30,691 - INFO - __main__ - Program started
+2022-12-22 07:10:30,780 - INFO - werkzeug -  * Restarting with stat
+2022-12-22 07:10:32,176 - INFO - __main__ - Program started
+2022-12-22 07:10:32,226 - WARNING - werkzeug -  * Debugger is active!
+2022-12-22 07:10:32,242 - INFO - werkzeug -  * Debugger PIN: 191-848-549
+2022-12-22 07:10:32,679 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-22 07:10:39,970 - DEBUG - __main__ - This is a debug message
+
+2022-12-22 14:09:04,536 - WARNING - werkzeug -  * Debugger is active!
+2022-12-22 14:09:04,542 - INFO - werkzeug -  * Debugger PIN: 191-848-549
+2022-12-22 14:09:04,968 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-22 14:09:04,982 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-22 14:09:44,720 - INFO - werkzeug -  * Detected change in 'C:\\Users\\nirai\\OneDrive\\Documents\\Pandiaraj\\Python-Projects\\python-projects\\InventoryWebApp\\app.py', reloading
+2022-12-22 14:09:44,755 - INFO - werkzeug -  * Restarting with stat
+2022-12-22 14:09:44,756 - INFO - werkzeug -  * Detected change in 'C:\\Users\\nirai\\OneDrive\\Documents\\Pandiaraj\\Python-Projects\\python-projects\\InventoryWebApp\\app.py', reloading
+2022-12-22 14:09:44,787 - INFO - werkzeug -  * Restarting with stat
+2022-12-22 14:09:45,988 - INFO - __main__ - Program started
+2022-12-22 14:09:45,988 - INFO - __main__ - Program started
+2022-12-22 14:09:46,012 - WARNING - werkzeug -  * Debugger is active!
+2022-12-22 14:09:46,012 - INFO - werkzeug -  * Debugger PIN: 191-848-549
+2022-12-22 14:09:46,028 - WARNING - werkzeug -  * Debugger is active!
+2022-12-22 14:09:46,028 - INFO - werkzeug -  * Debugger PIN: 191-848-549
+2022-12-22 14:09:46,567 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-22 14:09:46,574 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-22 14:09:55,794 - INFO - werkzeug -  * Detected change in 'C:\\Users\\nirai\\OneDrive\\Documents\\Pandiaraj\\Python-Projects\\python-projects\\InventoryWebApp\\app.py', reloading
+2022-12-22 14:09:55,810 - INFO - werkzeug -  * Detected change in 'C:\\Users\\nirai\\OneDrive\\Documents\\Pandiaraj\\Python-Projects\\python-projects\\InventoryWebApp\\app.py', reloading
+2022-12-22 14:09:55,831 - INFO - werkzeug -  * Restarting with stat
+2022-12-22 14:09:55,860 - INFO - werkzeug -  * Restarting with stat
+2022-12-22 14:09:56,931 - INFO - __main__ - Program started
+2022-12-22 14:09:56,963 - WARNING - werkzeug -  * Debugger is active!
+2022-12-22 14:09:56,963 - INFO - werkzeug -  * Debugger PIN: 191-848-549
+2022-12-22 14:09:57,015 - WARNING - werkzeug -  * Debugger is active!
+2022-12-22 14:09:57,015 - INFO - werkzeug -  * Debugger PIN: 191-848-549
+2022-12-22 14:09:57,363 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-22 14:09:57,471 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-22 14:10:23,882 - INFO - werkzeug -  * Detected change in 'C:\\Users\\nirai\\OneDrive\\Documents\\Pandiaraj\\Python-Projects\\python-projects\\InventoryWebApp\\app.py', reloading
+2022-12-22 14:10:23,953 - INFO - werkzeug -  * Restarting with stat
+2022-12-22 14:10:23,980 - INFO - werkzeug -  * Detected change in 'C:\\Users\\nirai\\OneDrive\\Documents\\Pandiaraj\\Python-Projects\\python-projects\\InventoryWebApp\\app.py', reloading
+2022-12-22 14:10:24,025 - INFO - werkzeug -  * Restarting with stat
+2022-12-22 14:10:25,147 - INFO - __main__ - Program started
+2022-12-22 14:10:25,164 - INFO - __main__ - Program started
+2022-12-22 14:10:25,172 - WARNING - werkzeug -  * Debugger is active!
+2022-12-22 14:10:25,188 - INFO - werkzeug -  * Debugger PIN: 191-848-549
+2022-12-22 14:10:25,188 - WARNING - werkzeug -  * Debugger is active!
+2022-12-22 14:10:25,204 - INFO - werkzeug -  * Debugger PIN: 191-848-549
+2022-12-22 14:10:25,690 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-22 14:10:25,693 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-22 14:10:44,637 - INFO - werkzeug -  * Detected change in 'C:\\Users\\nirai\\OneDrive\\Documents\\Pandiaraj\\Python-Projects\\python-projects\\InventoryWebApp\\app.py', reloading
+2022-12-22 14:10:44,637 - INFO - werkzeug -  * Detected change in 'C:\\Users\\nirai\\OneDrive\\Documents\\Pandiaraj\\Python-Projects\\python-projects\\InventoryWebApp\\app.py', reloading
+2022-12-22 14:10:44,682 - INFO - werkzeug -  * Restarting with stat
+2022-12-22 14:10:44,682 - INFO - werkzeug -  * Restarting with stat
+2022-12-22 14:10:45,949 - INFO - __main__ - Program started
+2022-12-22 14:10:45,949 - INFO - __main__ - Program started
+2022-12-22 14:10:45,980 - WARNING - werkzeug -  * Debugger is active!
+2022-12-22 14:10:45,980 - WARNING - werkzeug -  * Debugger is active!
+2022-12-22 14:10:45,996 - INFO - werkzeug -  * Debugger PIN: 191-848-549
+2022-12-22 14:10:45,996 - INFO - werkzeug -  * Debugger PIN: 191-848-549
+2022-12-22 14:10:46,551 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-22 14:10:46,573 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-22 14:11:26,754 - INFO - __main__ - ** inside product add method
+2022-12-22 14:11:26,778 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:11:26] "GET /product_add HTTP/1.1" 200 -
+2022-12-22 14:11:28,486 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:11:28] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:11:28,502 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:11:28] "[36mGET /static/product_style.css HTTP/1.1[0m" 304 -
+2022-12-22 14:11:33,082 - INFO - __main__ - ** inside product add method
+2022-12-22 14:11:33,088 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:11:33] "GET /product_add HTTP/1.1" 200 -
+2022-12-22 14:11:33,115 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:11:33] "[36mGET /static/product_style.css HTTP/1.1[0m" 304 -
+2022-12-22 14:11:33,119 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:11:33] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:11:35,569 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:11:35] "GET /product_update_view HTTP/1.1" 200 -
+2022-12-22 14:11:35,624 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:11:35] "[36mGET /static/product_style.css HTTP/1.1[0m" 304 -
+2022-12-22 14:11:35,685 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:11:35] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:12:11,667 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:11] "GET /product_update_view HTTP/1.1" 200 -
+2022-12-22 14:12:11,699 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:11] "[36mGET /static/product_style.css HTTP/1.1[0m" 304 -
+2022-12-22 14:12:11,699 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:11] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:12:14,230 - INFO - __main__ - ** inside product add method
+2022-12-22 14:12:14,246 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:14] "GET /product_add HTTP/1.1" 200 -
+2022-12-22 14:12:14,309 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:14] "[36mGET /static/product_style.css HTTP/1.1[0m" 304 -
+2022-12-22 14:12:14,313 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:14] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:12:18,612 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:18] "GET /product_add_data_view HTTP/1.1" 200 -
+2022-12-22 14:12:18,677 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:18] "[36mGET /static/product_dataview.css HTTP/1.1[0m" 304 -
+2022-12-22 14:12:18,678 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:18] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:12:23,889 - INFO - __main__ - ** inside product add method
+2022-12-22 14:12:23,898 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:23] "GET /product_add HTTP/1.1" 200 -
+2022-12-22 14:12:23,972 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:23] "[36mGET /static/product_style.css HTTP/1.1[0m" 304 -
+2022-12-22 14:12:24,016 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:24] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:12:38,630 - INFO - __main__ - ** inside product add method
+2022-12-22 14:12:38,655 - DEBUG - __main__ - 1 Record inserted successfully into product table
+2022-12-22 14:12:38,660 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:38] "[32mPOST /product_add HTTP/1.1[0m" 302 -
+2022-12-22 14:12:38,672 - INFO - __main__ - ** inside product add method
+2022-12-22 14:12:38,674 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:38] "GET /product_add HTTP/1.1" 200 -
+2022-12-22 14:12:38,717 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:38] "[36mGET /static/product_style.css HTTP/1.1[0m" 304 -
+2022-12-22 14:12:38,736 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:38] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:12:40,528 - DEBUG - __main__ - This is a debug message
+2022-12-22 14:12:40,535 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:40] "GET /home HTTP/1.1" 200 -
+2022-12-22 14:12:40,599 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:40] "[36mGET /static/home.css HTTP/1.1[0m" 304 -
+2022-12-22 14:12:40,605 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:40] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:12:40,610 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:40] "[36mGET /static/images/order.png HTTP/1.1[0m" 304 -
+2022-12-22 14:12:40,611 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:40] "[36mGET /static/images/deliverypi.jpg HTTP/1.1[0m" 304 -
+2022-12-22 14:12:44,680 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:44] "GET /product_update_view HTTP/1.1" 200 -
+2022-12-22 14:12:44,736 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:44] "[36mGET /static/product_style.css HTTP/1.1[0m" 304 -
+2022-12-22 14:12:44,743 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:44] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:12:47,322 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:47] "GET /product_delete_view HTTP/1.1" 200 -
+2022-12-22 14:12:47,385 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:47] "[36mGET /static/product_style.css HTTP/1.1[0m" 304 -
+2022-12-22 14:12:47,402 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:47] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:12:49,362 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:49] "GET /product_add_data_view HTTP/1.1" 200 -
+2022-12-22 14:12:49,401 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:49] "[36mGET /static/product_dataview.css HTTP/1.1[0m" 304 -
+2022-12-22 14:12:49,401 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:49] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:12:52,541 - DEBUG - __main__ - This is a debug message
+2022-12-22 14:12:52,541 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:52] "GET /home HTTP/1.1" 200 -
+2022-12-22 14:12:52,603 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:52] "[36mGET /static/home.css HTTP/1.1[0m" 304 -
+2022-12-22 14:12:52,605 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:52] "[36mGET /static/images/order.png HTTP/1.1[0m" 304 -
+2022-12-22 14:12:52,619 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:52] "[36mGET /static/images/deliverypi.jpg HTTP/1.1[0m" 304 -
+2022-12-22 14:12:52,621 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:52] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:12:57,144 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:57] "GET /report HTTP/1.1" 200 -
+2022-12-22 14:12:57,198 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:57] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+2022-12-22 14:12:57,231 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:57] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:12:59,845 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:59] "GET /productmove HTTP/1.1" 200 -
+2022-12-22 14:12:59,888 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:59] "[36mGET /static/product_style.css HTTP/1.1[0m" 304 -
+2022-12-22 14:12:59,893 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:12:59] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:13:18,593 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:13:18] "[32mPOST /productmove HTTP/1.1[0m" 302 -
+2022-12-22 14:13:18,624 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:13:18] "GET /productmove HTTP/1.1" 200 -
+2022-12-22 14:13:18,663 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:13:18] "[36mGET /static/product_style.css HTTP/1.1[0m" 304 -
+2022-12-22 14:13:18,663 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:13:18] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:13:38,326 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:13:38] "[32mPOST /productmove HTTP/1.1[0m" 302 -
+2022-12-22 14:13:38,360 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:13:38] "GET /productmove HTTP/1.1" 200 -
+2022-12-22 14:13:38,409 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:13:38] "[36mGET /static/product_style.css HTTP/1.1[0m" 304 -
+2022-12-22 14:13:38,409 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:13:38] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:13:40,179 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:13:40] "GET /productmove_data_view HTTP/1.1" 200 -
+2022-12-22 14:13:40,236 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:13:40] "[36mGET /static/productmove_dataview.css HTTP/1.1[0m" 304 -
+2022-12-22 14:13:40,252 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:13:40] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:13:47,488 - DEBUG - __main__ - This is a debug message
+2022-12-22 14:13:47,492 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:13:47] "GET /home HTTP/1.1" 200 -
+2022-12-22 14:13:47,549 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:13:47] "[36mGET /static/home.css HTTP/1.1[0m" 304 -
+2022-12-22 14:13:47,561 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:13:47] "[36mGET /static/images/order.png HTTP/1.1[0m" 304 -
+2022-12-22 14:13:47,563 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:13:47] "[36mGET /static/images/deliverypi.jpg HTTP/1.1[0m" 304 -
+2022-12-22 14:13:47,564 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:13:47] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:13:48,653 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:13:48] "GET /report HTTP/1.1" 200 -
+2022-12-22 14:13:48,754 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:13:48] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+2022-12-22 14:13:48,769 - INFO - werkzeug - 127.0.0.1 - - [22/Dec/2022 14:13:48] "[36mGET /static/images/inventory-logo.png HTTP/1.1[0m" 304 -
+2022-12-22 14:14:05,753 - INFO - werkzeug -  * Detected change in 'C:\\Users\\nirai\\OneDrive\\Documents\\Pandiaraj\\Python-Projects\\python-projects\\InventoryWebApp\\app.py', reloading
+2022-12-22 14:14:05,845 - INFO - werkzeug -  * Restarting with stat
+2022-12-22 14:14:05,908 - INFO - werkzeug -  * Detected change in 'C:\\Users\\nirai\\OneDrive\\Documents\\Pandiaraj\\Python-Projects\\python-projects\\InventoryWebApp\\app.py', reloading
+2022-12-22 14:14:05,956 - INFO - werkzeug -  * Restarting with stat
+2022-12-22 14:14:06,941 - INFO - __main__ - Program started
+2022-12-22 14:14:06,988 - WARNING - werkzeug -  * Debugger is active!
+2022-12-22 14:14:06,999 - INFO - werkzeug -  * Debugger PIN: 191-848-549
+2022-12-22 14:14:07,088 - INFO - __main__ - Program started
+2022-12-22 14:14:07,139 - WARNING - werkzeug -  * Debugger is active!
+2022-12-22 14:14:07,151 - INFO - werkzeug -  * Debugger PIN: 191-848-549
+2022-12-22 14:14:07,828 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-22 14:14:07,886 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-22 14:15:23,146 - INFO - werkzeug -  * Detected change in 'C:\\Users\\nirai\\OneDrive\\Documents\\Pandiaraj\\Python-Projects\\python-projects\\InventoryWebApp\\app.py', reloading
+2022-12-22 14:15:23,176 - INFO - werkzeug -  * Restarting with stat
+2022-12-22 14:15:23,259 - INFO - werkzeug -  * Detected change in 'C:\\Users\\nirai\\OneDrive\\Documents\\Pandiaraj\\Python-Projects\\python-projects\\InventoryWebApp\\app.py', reloading
+2022-12-22 14:15:23,313 - INFO - werkzeug -  * Restarting with stat
+2022-12-22 14:15:24,638 - INFO - __main__ - Program started
+2022-12-22 14:15:24,668 - WARNING - werkzeug -  * Debugger is active!
+2022-12-22 14:15:24,684 - INFO - werkzeug -  * Debugger PIN: 191-848-549
+2022-12-22 14:15:24,696 - INFO - __main__ - Program started
+2022-12-22 14:15:24,729 - WARNING - werkzeug -  * Debugger is active!
+2022-12-22 14:15:24,738 - INFO - werkzeug -  * Debugger PIN: 191-848-549
+2022-12-22 14:15:25,167 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-22 14:15:25,306 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-22 14:15:37,566 - INFO - werkzeug -  * Detected change in 'C:\\Users\\nirai\\OneDrive\\Documents\\Pandiaraj\\Python-Projects\\python-projects\\InventoryWebApp\\app.py', reloading
+2022-12-22 14:15:37,582 - INFO - werkzeug -  * Detected change in 'C:\\Users\\nirai\\OneDrive\\Documents\\Pandiaraj\\Python-Projects\\python-projects\\InventoryWebApp\\app.py', reloading
+2022-12-22 14:15:37,602 - INFO - werkzeug -  * Restarting with stat
+2022-12-22 14:15:37,619 - INFO - werkzeug -  * Restarting with stat
+2022-12-22 14:15:38,762 - INFO - __main__ - Program started
+2022-12-22 14:15:38,810 - WARNING - werkzeug -  * Debugger is active!
+2022-12-22 14:15:38,810 - WARNING - werkzeug -  * Debugger is active!
+2022-12-22 14:15:38,824 - INFO - werkzeug -  * Debugger PIN: 191-848-549
+2022-12-22 14:15:39,394 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-12-22 14:15:39,410 - INFO - werkzeug -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)

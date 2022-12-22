@@ -1,20 +1,25 @@
 *{
-    margin: 0px;
-    padding: 0px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 body
 {
-    background-color: #B1D7B4;
+    background-color: #B1D7B4 !important;
     color: white;
+}
+
+.mainContent{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: inherit;
 }
 h1
 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20;
-    font-weight: bold;
+    font-size: 25px;
     text-align: center;
-    margin-top: 100px;
-    color: #181818;
+    color: black;
 }
 form
 {
@@ -30,11 +35,23 @@ input[type=text]
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    margin-left: 30px;
+    
 }
 input[type=submit]
 {
-    width: 10%;
+    width: 15%;
+    background-color: #FFC090;
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10%;
+}
+button[type=button]
+{
+    width: 15%;
     background-color: #FFC090;
     color: white;
     padding: 14px 20px;
@@ -42,7 +59,7 @@ input[type=submit]
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: 74px;
+    margin-left: 10%;
 }
 input[type=submit]:hover
 {
@@ -70,7 +87,9 @@ input[type=number]
 }
 label
 {
+    color: white;
     font-size: 20px;
+    width: 220px;
 }
 h4
 {
@@ -80,7 +99,7 @@ h4
 }
 .btn1
 {
-    width: 10%;
+    width: 15%;
     background-color: #FFC090;
     color: white;
     padding: 14px 20px;
@@ -88,41 +107,81 @@ h4
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: 74px;
+    margin-left: 10%;
 }
 .btn1:hover
 {
     background-color: black;
 }
+
 table
 {
     text-align: center;
-    margin-left: 30%;
-    margin-top: 100px;
-}
-tr
-{
+    margin-left: 35%;
+    margin-top: 50px;
     color: black;
 }
-tr td,tr,th
+
+tr th
 {
     border: 1px solid black;
     padding: 15px;
 }
-/*p a
+tr td
 {
-    background: #1D1CE5;
-    text-decoration: none;
-    padding: 16px 25px;
-    margin: 16px 25px;
-    color: white;
+    border: 1px solid black;
+    padding: 15px;
+    border-collapse: collapse;
 }
-a
+.navbar{
+    background-color: #7FB77E;
+    height: 100px;
+}
+.navbar-brand
 {
-    padding: 8px 15px;
-    background: #8BBCCC;
-    color: white;
-    border: none;
-    text-decoration: none;
-    border-radius: 10px;
-}*/
+    font-size: 2rem;
+    color: #F7F6DC;
+    font-family: 'Lobster',cursive;
+}
+.navbar-brand:hover
+{
+    color: black;
+}
+.nav-link
+{
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #FA7070;
+    text-transform: uppercase;
+    font-family: 'Rubik',sans-serif;
+}
+.nav-link:hover
+{
+    color: black;
+}
+.card:hover
+{
+    box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+    transition: 0.5s;
+}
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	/* .navbar .nav-item:hover .nav-link{   } */
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+img
+{
+    width: 125px;
+}
+
+.footer {
+    
+    color: black;
+  }
+
+.editbtn{
+    background: #1D1CE5;text-decoration: none;padding: 10px 20px;margin: 16px 25px;color: white;border-radius: 10px;
+}

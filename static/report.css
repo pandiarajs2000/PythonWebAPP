@@ -1,6 +1,7 @@
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 body
 {
@@ -45,4 +46,43 @@ tr td,tr,th
 .btn1:hover
 {
     background-color: black;
+}
+.navbar-brand
+{
+    font-size: 2rem;
+    color: #F7F6DC;
+    font-family: 'Lobster',cursive;
+}
+.navbar-brand:hover
+{
+    color: black;
+}
+.nav-link
+{
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #F7F6DC;
+    text-transform: uppercase;
+    font-family: 'Rubik',sans-serif;
+}
+.nav-link:hover
+{
+    color: black;
+}
+.card:hover
+{
+    box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+    transition: 0.5s;
+}
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	/* .navbar .nav-item:hover .nav-link{   } */
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+img
+{
+    width: 125px;
 }
